@@ -7,28 +7,32 @@ import (
 	"flag"       	
 	)
 
-func main() { 
+func underscore() { 
  
     flag.Parse()
-    arg := flag.Arg(0) 
+    word := flag.Arg(0) 
  
-    s := strings.Split(arg, "")
+    list := strings.Split(arg, "")
  
     first := 0
-    last := len(s)-1
+    last := len(list)-1
     
-	for s[first] == "_" {
+	for list[first] == "_" {  //while döngüsü
             first++
         }
-	for s[last] == "_" {
+	for list[last] == "_" {   //while döngüsü
             last--
         }
         for i := first ; i < last ; i++ {
-            if s[i] == "_" {
-               s[i] = " "
+            if list[i] == "_" {
+               list[i] = " "
             }
         }
 
-    fmt.Println(strings.Join(s, ""))
+    return (strings.Join(list, ""))
 
+}
+
+func main() {
+    fmt.Println(underscore())
 }

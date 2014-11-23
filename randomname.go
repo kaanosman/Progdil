@@ -5,6 +5,7 @@ import (
 "math/rand"
 "time"
 "flag"
+"strconv"
 )
 
 func seedAndReturnRandom(n int) int {
@@ -20,7 +21,7 @@ func main() {
 
  flag.Parse()
  dil := flag.Arg(0)
- adet := flag.Arg(1)
+ adet,err := strconv.Atoi(flag.Arg(1));
   
  isim:= []string {"kedi","insan","deniz","masa","dolap","bilgisayar",
 			"kapi","pencere","hafta","gece","gunduz","marti","kazak",
@@ -39,13 +40,14 @@ func main() {
 if (dil=="tr") {
    for i := 0 ; i < adet ; i++ {
 fmt.Println(randomFrom(sifat),randomFrom(isim))
-  }                        
+  }  
 }
 
 if (dil=="en") {
    for i := 0 ; i < adet ; i++ { 
 
 fmt.Println(randomFrom(adjactive),randomFrom(name))
+fmt.Println(err)
   }
 }
 

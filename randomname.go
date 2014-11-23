@@ -13,15 +13,15 @@ func seedAndReturnRandom(n int) int {
 	return rand.Intn(n)
 }
 
-func randomFrom(source []string) string {
-	return source[seedAndReturnRandom(len(source))]
+func randomFrom(list []string) string {
+	return list[seedAndReturnRandom(len(list))]
 }
 
 func main() {
 
  flag.Parse()
- dil := flag.Arg(0)
- adet,err := strconv.Atoi(flag.Arg(1));
+ lang := flag.Arg(0)
+ count,err := strconv.Atoi(flag.Arg(1));
   
  isim:= []string {"Kedi",
                   "Insan",
@@ -109,18 +109,17 @@ func main() {
  
 
 
-if (dil=="tr") {
-   for i := 0 ; i < adet ; i++ {
+if (lang == "tr") {
+   for i := 0 ; i < count ; i++ {
        fmt.Println(randomFrom(sifat),randomFrom(isim))
   }  
 }
 
-if (dil=="en") {
-   for i := 0 ; i < adet ; i++ { 
+if (lang == "en") {
+   for i := 0 ; i < count ; i++ { 
        fmt.Println(randomFrom(adjactive),randomFrom(name))
   }
   fmt.Println(err)
 }
-
 
 }

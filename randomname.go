@@ -23,41 +23,104 @@ func main() {
  dil := flag.Arg(0)
  adet,err := strconv.Atoi(flag.Arg(1));
   
- isim:= []string {"kedi","insan","deniz","masa","dolap","bilgisayar",
-			"kapi","pencere","hafta","gece","gunduz","marti","kazak",
-			"sarisin","sahil","merdiven","ahmet","yol","araba","agac",
-			"yaprak","dal","adam","konuk","ahmet","koca","kadin"}
+ isim:= []string {"Kedi",
+                  "Insan",
+                  "Deniz",
+                  "Masa",
+                  "Dolap",
+                  "Bilgisayar",
+		  "Kapi",
+                  "Pencere",
+                  "Hafta",
+                  "Gece",
+                  "Gunduz",
+                  "Marti",
+                  "Kazak",
+	          "Perde",
+                  "Sahil",
+                  "Merdiven",
+                  "Ahmet",
+                  "Yol",
+                  "Araba",
+                  "Agac"}
 
+ sifat:= []string {"Deli",
+                   "Dolu" ,
+                   "Yaramaz",
+                   "Zayif",
+                   "Guzel",
+                   "Hizli",
+                   "Yavas",
+                   "Yakisikli",
+                   "Mert",
+		   "Cimri",
+                   "Kel",
+                   "Masmavi",
+                   "Ucan",
+                   "Kirik",
+                   "Kesik",
+                   "Sevimli",
+                   "Kötü",
+                   "Iyi",
+                   "Uzun",
+                   "Kisa"}
+                   
+ name:= []string {"Door",
+                  "Mike" ,
+                  "Table",
+                  "Caitlyn",
+                  "Chair",
+                  "Stairs",
+                  "Joe",
+                  "Graves",
+                  "Soraka",
+                  "Window",
+                  "House",
+                  "Towel",
+                  "Addison",
+                  "Isabella",
+                  "Andrew",
+                  "Louis",
+                  "Paul",
+                  "Victor",
+                  "Lamp",
+                  "Mirror"}
 
- sifat:= []string {"deli", "dolu" , "yaramaz","iyi","guzel","hizli","yavas","yakisikli","mert",
-			"cimri","kel","masmavi","ucan","kac","yarim","bu","su"}
- name:= []string {"joe", "mike" , "caitlyn","graves","soraka"}
-
- adjactive:= []string {"happy", "sad" , "beautiful"}
-
+ adjactive:= []string {"Angry",
+                       "Amphibious",
+                       "Bad",
+                       "Beautiful", 
+                       "Big",
+                       "Careless",
+                       "Difficult",
+		       "Dry",
+                       "Elastic",
+                       "Empty",
+                       "First",
+                       "Great",
+                       "Happy",
+                       "Heavy",
+                       "Natural",
+                       "Nervous",
+                       "Productive",
+                       "Sharp",
+                       "Small",
+                       "Visible"}  
+ 
 
 
 if (dil=="tr") {
    for i := 0 ; i < adet ; i++ {
-fmt.Println(randomFrom(sifat),randomFrom(isim))
+       fmt.Println(randomFrom(sifat),randomFrom(isim))
   }  
 }
 
 if (dil=="en") {
    for i := 0 ; i < adet ; i++ { 
-
-fmt.Println(randomFrom(adjactive),randomFrom(name))
-fmt.Println(err)
+       fmt.Println(randomFrom(adjactive),randomFrom(name))
   }
+  fmt.Println(err)
 }
-
-
-
-
-
-
-
-
 
 
 }

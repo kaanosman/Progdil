@@ -29,10 +29,10 @@ func underscore() {
             }
         }
 
-    return (strings.Join(list, ""))
+    fmt.Println(strings.Join(list, ""))
 
 }
 
 func main() {
-    fmt.Println(underscore())
+    underscore()
 }

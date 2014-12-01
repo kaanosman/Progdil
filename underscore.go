@@ -12,7 +12,7 @@ func underscore() {
     flag.Parse()
     word := flag.Arg(0) 
  
-    list := strings.Split(arg, "")
+    list := strings.Split(word, "")
  
     first := 0
     last := len(list)-1

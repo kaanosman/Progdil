@@ -7,7 +7,7 @@ import (
 	"flag"       	
 	)
 
-func underscore() { 
+func underscore() string { 
  
     flag.Parse()
     word := flag.Arg(0) 
@@ -29,10 +29,10 @@ func underscore() {
             }
         }
 
-    fmt.Println(strings.Join(list, ""))
+    return(strings.Join(list, ""))
 
 }
 
 func main() {
-    underscore()
+    fmt.Println(underscore())
 }

@@ -122,7 +122,7 @@ func main() {
 
 if (lang == "tr") {
    for (count > 0) {
-     name := (randomFrom(sifat),randomFrom(isim))
+     name := (randomFrom(sifat)+" "+randomFrom(isim))
      if (check(checklist, name) == false) {
         checklist = append(checklist, name)
         fmt.Println(name)

@@ -18,13 +18,12 @@ func randomFrom(list []string) string {
 }
 
 func check(list []string, s string) bool {
-   for i := 0 ; i <= len(list) ; i++ {  
-     if list[i] == s {
-        return true
-     } else {
-        return false
-     } 
-  }
+   for _, v := range list {
+        if v == s {
+            return true
+        }
+    }
+    return false
 }
 
 func main() {

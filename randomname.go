@@ -17,8 +17,19 @@ func randomFrom(list []string) string {
 	return list[seedAndReturnRandom(len(list))]
 }
 
-func main() {
+func check(list []string, s string) bool {
+   for i := 0 ; i < len(list) ; i++ {  
+     if list[i] == s {
+        return true
+     } else {
+        return false
+     } 
+  }
+}
 
+func main() {
+ var checklist []string
+ 
  flag.Parse()
  lang := flag.Arg(0)
  count,err := strconv.Atoi(flag.Arg(1));
@@ -110,14 +121,24 @@ func main() {
 
 
 if (lang == "tr") {
-   for i := 0 ; i < count ; i++ {
-       fmt.Println(randomFrom(sifat),randomFrom(isim))
+   for count>0 {
+     name := (randomFrom(sifat),randomFrom(isim))
+     if (check(checklist, name) == false) {
+        checklist = append(checklist, name)
+        fmt.Println(name)
+        count--
+     }
   }  
 }
 
 if (lang == "en") {
-   for i := 0 ; i < count ; i++ { 
-       fmt.Println(randomFrom(adjactive),randomFrom(name))
+   for count>0 { 
+     name := (randomFrom(adjactive)+" "+randomFrom(name))  
+     if (check(checklist,name) == false) {
+         checklist = append(checklist, name)
+         fmt.Println(name)
+         count--
+}
   }
   fmt.Println(err)
 }

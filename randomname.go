@@ -18,7 +18,7 @@ func randomFrom(list []string) string {
 }
 
 func check(list []string, s string) bool {
-   for i := 0 ; i < len(list) ; i++ {  
+   for i := 0 ; i <= len(list) ; i++ {  
      if list[i] == s {
         return true
      } else {

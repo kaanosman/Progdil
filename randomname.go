@@ -121,7 +121,7 @@ func main() {
 
 
 if (lang == "tr") {
-   for count>0 {
+   for (count > 0) {
      name := (randomFrom(sifat),randomFrom(isim))
      if (check(checklist, name) == false) {
         checklist = append(checklist, name)
@@ -132,7 +132,7 @@ if (lang == "tr") {
 }
 
 if (lang == "en") {
-   for count>0 { 
+   for (count > 0) { 
      name := (randomFrom(adjactive)+" "+randomFrom(name))  
      if (check(checklist,name) == false) {
          checklist = append(checklist, name)
@@ -140,7 +140,6 @@ if (lang == "en") {
          count--
 }
   }
-  fmt.Println(err)
 }
-
+ fmt.Println(err)
 }

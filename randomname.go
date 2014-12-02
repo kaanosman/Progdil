@@ -32,7 +32,7 @@ func main() {
  flag.Parse()
  lang := flag.Arg(0)
  count,err := strconv.Atoi(flag.Arg(1));
-  
+ _=err 
  isim:= []string {"Kedi",
                   "Insan",
                   "Deniz",
@@ -117,17 +117,15 @@ func main() {
                        "Small",
                        "Visible"}  
  
-
-
-if (lang == "tr") {
-   for (count > 0) {
+ if (lang == "tr") {
+    for (count > 0) {
      name := (randomFrom(sifat)+" "+randomFrom(isim))
      if (check(checklist, name) == false) {
         checklist = append(checklist, name)
         fmt.Println(name)
         count--
      }
-  }  
+   }  
 }
 
 if (lang == "en") {
@@ -137,8 +135,7 @@ if (lang == "en") {
          checklist = append(checklist, name)
          fmt.Println(name)
          count--
+     }
+   }
 }
-  }
-}
- fmt.Println(err)
 }
